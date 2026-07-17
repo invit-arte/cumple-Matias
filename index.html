@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>MI CUMPLE MATÍAS</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--tipografia nueva-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <!--iconos-->
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body,
+      h1 {
+        font-family: "Gloria Hallelujah", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffffff;
+      }
+      h2 {
+        font-family: "Gloria Hallelujah", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffffff;
+      }
+      body,
+      html {
+        height: 100%;
+      }
+      p {
+        line-height: 2;
+      }
+      .bgimg2 {
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+      .bgimg2 {
+        background-color: #000000;
+        background-image: url(images/FONDOMATIAS.png);
+      }
+      .btn-custom2 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        background-image: url(images/BOTONROJO.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: white;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: sans-serif;
+        gap: 8px;
+        height: 120px;
+        min-width: 250px;
+        background-size: contain;
+      }
+  
+      video {
+        width: 100vw;
+        height: auto;
+        left: 0;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .texto-con-icono img {
+        width: 60px;
+      display: inline-block !important;
+}
+      /*margin-top: 10px;  Espacio entre el texto y la imagen */
+      /*width: 120px;  Ancho de la imagen (ajústalo según sea necesario) */
+      /*height: 120px;  Altura de la imagen */
+      .image_sobre {
+        width: 40%;
+        height: auto;
+      display: block;
+      /* position: relative;
+      top: 25%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;*/
+      }
+      .scroll-indicator{
+    position:fixed;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:999;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    color:white;
+    text-shadow:0 0 10px black;
+
+    animation:flotar 1.8s infinite;
+    transition:.5s;
+}
+
+.scroll-indicator span{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.scroll-indicator i{
+    font-size:30px;
+}
+
+.fondo-modal{
+
+    background:transparent;
+    border:none;
+
+}
+
+.imagen-modal{
+
+    width:94%;
+    max-width:420px;
+
+    display:block;
+    margin:auto;
+
+    border-radius:28px;
+
+    animation:zoom .35s;
+
+    box-shadow:
+        0 0 18px rgba(0,255,90,.35),
+        0 0 35px rgba(0,255,90,.55),
+        0 0 70px rgba(0,255,90,.30);
+
+      animation:
+        zoom .35s,
+        brilloVerde 2s infinite alternate;    
+
+}
+
+.boton-cerrar-modal {
+  position: absolute;
+  top: -35px;
+  right: 10px;
+  z-index: 10;
+  opacity: 1;
+}
+@keyframes brilloVerde{
+
+from{
+
+box-shadow:
+0 0 15px #18ff5c,
+0 0 35px rgba(24,255,92,.55);
+
+}
+
+to{
+
+box-shadow:
+0 0 30px #18ff5c,
+0 0 60px rgba(24,255,92,.9),
+0 0 90px rgba(24,255,92,.45);
+
+}
+
+}
+
+@keyframes zoom{
+
+0%{
+    transform:scale(.75);
+    opacity:0;
+}
+
+70%{
+    transform:scale(1.03);
+}
+
+100%{
+    transform:scale(1);
+    opacity:1;
+}
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(.8);
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
+@keyframes flotar{
+
+0%{
+transform:translate(-50%,0px);
+}
+
+50%{
+transform:translate(-50%,10px);
+}
+
+100%{
+transform:translate(-50%,0px);
+}
+
+}
+
+    @font-face {
+      font-family: myTipografia;   /*Nombre de la tipografia (el que sea)*/
+      src: url(texto/AlfaSlabOne-Regular.ttf) format(OpenType);    /*Ruta de la tipografia y tipo de formato*/
+    }
+
+    .prueba01 {
+      font-family: 'myTipografia';    /*Tu nombre de la tipografia*/
+    }
+
+    </style>
+  </head>
+  <body>
+    <video class="w-100" controls autoplay loop>
+      <source
+        src="images/VIDEOLIONELTHIAGO.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div class="scroll-indicator">
+    <span>Desliza</span>
+    <i class="fas fa-chevron-down"></i>
+</div>
+
+    <!-- Wedding information ,<h1 class="w3-text-grey"> -->
+    <div class="w3-container w3-padding-64 bgimg2 w3-center" id="wedding">
+      <div class="w3-content">
+        <h2 class="prueba01">
+          TE ESPERAMOS EL SÁBADO 22 DE AGOSTO
+        </h2>
+        <br />
+        <h1><b>¡Habrá pastel, juegos y mucha diversión!</b></h1>
+
+    <div class="col-12" style="margin-top: 30px;">
+      <h2 class="prueba01"><b>CÓDIGO DE VESTIMENTA</b></h2>
+      <p class="prueba01">Ven con tu mejor outfit futbolero y tus tacos.</p>
+      <p class="prueba01">¡La cancha está lista y tú eres parte de este gran equipo! 🏆</p>
+    </div>
+
+    <div class="col-12" style="margin-top: 30px;">
+      <h2 class="prueba01"><b>UBICACIÓN</b></h2>
+      <p class="prueba01">Goal Fit Center</p>
+      <p class="prueba01">Calzada de las Brujas 98, Ex Hacienda Coapa, Tlalpan, 14390, CDMX</p>
+      <p class="prueba01">HORA 3:00 P.M.</p>
+      <div class="container text-center mt-5 bounce-top">
+        <a 
+          href="https://maps.app.goo.gl/hVTadF383bFXARvq6"
+          class="btn btn-custom2">
+          <p class="prueba01">UBICACIÓN</p></a>
+      </div>
+    </div>
+
+    <div class="col-12" style="margin-top: 30px;">
+      <h2 class="prueba01"><b>CONFIRMACIÓN DE ASISTENCIA</b></h2>
+      <div class="container text-center mt-3">
+        <a href="https://wa.me/525537276781?text=Claro%20que%20asistir%C3%A9%20al%20cumple%20de%20Mat%C3%ADas" class="btn btn-custom2">
+          <p class="prueba01">REGISTRO</p></a>
+      </div>
+    </div>
+
+    <div class="col-12" style="margin-top: 30px;">
+    <h2 class="prueba01"><b>ITINERARIO</b></h2>
+
+    <div class="container text-center mt-3">
+        <a
+            href="#"
+            class="btn btn-custom2"
+            data-bs-toggle="modal"
+            data-bs-target="#modalImagen">
+
+            <p class="prueba01">VER PROGRAMA</p>
+        </a>
+    </div>
+</div>
+
+    <div class="col-12" style="margin-top: 30px;">
+      <label class="custom-label prueba01">Opciones de regalo</label>
+      <div class="container text-center mt-3">
+        <!--<p class="prueba01">Mi mejor regalo es compartir contigo este gran día</p>
+        <p class="prueba01">Si deseas obsequiarme algo, puedo sugerir la siguiente opción:</p>-->
+        <div class="texto-con-icono">
+          <img src="images/SOBREFUT.png" alt="Icono" class="image_sobre">
+          <img src="images/REGALFUT.png" alt="Icono" class="image_sobre">
+        </div>
+        <!--<p class="prueba01"><b>¡LLUVIA DE SOBRES O UN REGALO!</b></p>-->
+      </div>
+    </div>
+
+  </div>
+  <br />
+<div
+  class="modal fade"
+  id="modalImagen"
+  tabindex="-1"
+  aria-labelledby="modalImagenLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content fondo-modal">
+
+      <button
+        type="button"
+        class="btn-close btn-close-white boton-cerrar-modal"
+        data-bs-dismiss="modal"
+        aria-label="Cerrar">
+      </button>
+
+      <img
+        src="images/PROGRAMA.jpg"
+        class="imagen-modal"
+        alt="Código de vestimenta">
+
+    </div>
+  </div>
+</div>
+
+<footer
+  class="w3-center w3-padding-16 "
+  style="background-color: #ffffff;"
+  >
+    <p class="prueba01 w3-text-green">MI CUMPLE MATÍAS</p>
+  </footer>
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const flecha=document.querySelector(".scroll-indicator");
+
+if(window.scrollY>50){
+
+flecha.style.opacity="0";
+flecha.style.pointerEvents="none";
+
+}else{
+
+flecha.style.opacity="1";
+
+}
+
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+
+</html>
